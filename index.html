@@ -1,1 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghafira Anindya Pasha</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #111;
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      overflow-x: hidden;
+    }
+
+    aside {
+      background-color: #1e1e1e;
+      width: 250px;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      border-right: 2px solid #ff5722;
+    }
+
+    aside h1 {
+      color: #fff;
+      font-size: 2em;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    aside h1::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 30px;
+      height: 3px;
+      background: #ff5722;
+    }
+
+    aside nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    aside nav ul li a {
+      color: #bbb;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    aside nav ul li a.active,
+    aside nav ul li a:hover {
+      color: #ff5722;
+    }
+
+    main {
+      margin-left: 250px;
+      padding: 60px 40px;
+      flex: 1;
+    }
+
+    section {
+      margin-bottom: 80px;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .hero-text {
+      max-width: 600px;
+      animation: fadeInLeft 1s ease-in-out;
+    }
+
+    .hero-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h3 {
+      font-size: 1.8rem;
+      color: #ff5722;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+
+    .hero-text .btn {
+      background: #ff5722;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .hero-text .btn:hover {
+      background: #e64a19;
+    }
+
+    .hero-img {
+      animation: fadeInRight 1s ease-in-out;
+    }
+
+    .hero-img img {
+      max-width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      border: 4px solid #ff5722;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ff5722;
+    }
+
+    section p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeInLeft {
+      from {opacity: 0; transform: translateX(-30px);}
+      to {opacity: 1; transform: translateX(0);}
+    }
+
+    @keyframes fadeInRight {
+      from {opacity: 0; transform: translateX(30px);}
+      to {opacity: 1; transform: translateX(0);}
+    }
+
+    @media (max-width: 768px) {
+      aside {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 2px solid #ff5722;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <div>
+      <h1>Ghafira</h1>
+      <nav>
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h2>Hello, my name is <span style="color:#ff5722">Ghafira</span></h2>
+        <h3>I’m a Web Designer</h3>
+        <p>Saya seorang Web Designer dengan pengalaman dan keahlian dalam desain UI/UX, pengembangan front-end, serta pembuatan prototipe di Figma dan aplikasi desain lainnya.</p>
+        <a href="#about" class="btn">More About Me</a>
+      </div>
+      <div class="hero-img">
+        <img src="gambar1.jpg" alt="Foto Ghafira">
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Saya adalah seorang desainer kreatif yang memiliki minat dalam membangun pengalaman digital yang menarik dan ramah pengguna. Saya percaya bahwa desain bukan hanya estetika, tapi juga tentang fungsi.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <p>HTML, CSS, JavaScript, Figma, UI/UX Design, Responsive Design, dan masih banyak lagi.</p>
+    </section>
+
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <p>Berisi berbagai proyek desain web dan aplikasi yang telah saya kerjakan, termasuk prototipe dan desain antarmuka pengguna.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Hubungi saya melalui email: ghafira@example.com atau melalui media sosial saya.</p>
+    </section>
+  </main>
+</body>
+</html>
